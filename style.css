@@ -1,27 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+/* ===== ESTILOS GENERALES (comunes a todas las páginas) ===== */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-*{
-    margin: 0 px;
-    padding: 0 px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Orbitron", sans-serif;
 }
-body{
-    background: greenyellow;
-    /*Añadir foto de fondo sustituyendo color*/
-}
 
 body {
-    background-image: url(./img/fondo.png);
+    background-image: url(../img/fondo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
+    color: white;
 }
 
-section{
+section {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -30,15 +26,18 @@ section{
     align-items: center;
     padding: 100px;
 }
+
+/* Header y navegación */
 header {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     padding: 40px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 }
 
 header .logo {
@@ -51,218 +50,388 @@ header .logo {
     padding: 0 10px;
     font-family: "Roboto", sans-serif;
     font-weight: 600;
-
+    transition: background 0.5s;
 }
-header .logo:hover{
-    color: white;
+
+header .logo:hover {
     background: rgb(103, 81, 0);
-    transition: 1s;
+}
 
-}
-header .navbar {
-    position: relative;
+.navbar {
     display: flex;
-}
-header .navbar li{
     list-style: none;
+}
+
+.navbar li {
     margin-left: 30px;
 }
 
-header .navbar li a{
-    text-decoration: none;
+.navbar li a {
     color: white;
+    text-decoration: none;
     font-weight: 600;
     padding: 10px;
-    transition: 0.3s;
-    font-size: 0.9;
+    transition: all 0.3s;
     text-transform: uppercase;
 }
-header .navbar li a:hover{
+
+.navbar li a:hover {
     border-bottom: 5px solid rgb(103, 81, 0);
-    padding: 2px;
+    padding-bottom: 2px;
 }
 
-
-/* Tablet en posición vertical (entre 600px y 900px) */
-@media (max-width: 900px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .menu {
-        margin-top: 10px;
-    }
-    .menu a {
-        display: block;
-        margin: 10px 0;
-        font-size: 18px;
-    }
-    video {
-        width: 90%;
-    }
+/* Circulo decorativo */
+.circulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(141, 227, 28, 0.325);
+    clip-path: circle(650px at right 800px);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-/* Teléfonos en posición horizontal (entre 480px y 600px) */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-    }
-    .logo img {
-        height: 50px;
-    }
-    .menu a {
-        font-size: 16px;
-        padding: 6px 10px;
-    }
-    video {
-        width: 95%;
-    }
+/* Redes sociales */
+.redesSociales {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    padding: 0 100px 30px;
+    list-style: none;
 }
 
-/* Teléfonos en posición vertical (menos de 480px) */
-@media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        padding: 10px;
-    }
-    .logo img {
-        height: 40px;
-    }
-    .menu a {
-        font-size: 14px;
-        padding: 5px 8px;
-    }
-    video {
-        width: 100%;
-    }
+.redesSociales li {
+    margin-left: 30px;
 }
 
-/*Contenido de la web*/
-.contenido{
-    position: relative;
+.redesSociales li a {
+    color: white;
+    font-size: 2em;
+    transition: color 0.3s;
+}
+
+.redesSociales li a:hover {
+    color: rgb(103, 81, 0);
+}
+
+/* Copyright */
+.copyright {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* ===== ESTILOS ESPECÍFICOS PARA LA PÁGINA PRINCIPAL (index.html) ===== */
+.contenido {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px;
 }
-.contenido .tituloBox{
-    position: relative;
+
+.tituloBox {
+    flex: 1;
     max-width: 600px;
-    text-align: center;
+    text-align: left;
 }
-.contenido .tituloBox h2{
+
+.tituloBox h2 {
     font-size: 2.2em;
     text-transform: uppercase;
-    color: white;
     line-height: 1.2;
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
 }
-.contenido .tituloBox h2 span{
+
+.tituloBox h2 span {
     background: rgb(103, 81, 0);
     color: white;
     padding: 0 10px;
     font-family: "Roboto", sans-serif;
     font-weight: 600;
     border-radius: 20px;
-    
 }
-.contenido .tituloBox p{
+
+.tituloBox p {
     font-size: 1.2em;
     line-height: 1.5;
-    color: white;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     margin-bottom: 20px;
     text-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
-.contenido .tituloBox a {
+
+.tituloBox a {
     text-decoration: none;
     text-transform: uppercase;
-    color: rgb(103, 81, 0); 
-    background: #fff;
+    color: rgb(103, 81, 0);
+    background: white;
     padding: 10px 20px;
-    margin: left 30px;
     border-radius: 20px;
     letter-spacing: 2px;
-    transition: 0.5s;
-}
-.contenido .tituloBox a:hover {
-    color: white;
-    background: rgb(103, 81, 0);
-    transition: 0.5s;
+    transition: all 0.5s;
 }
 
-.contenido .imgBox {
+.tituloBox a:hover {
+    color: white;
+    background: rgb(103, 81, 0);
+}
+
+.imgBox {
     width: 600px;
     display: flex;
     justify-content: flex-end;
     padding-right: 50px;
     margin-top: -50px;
-    z-index: -5;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-.contenido .imgBox img {
-    height: 80vh;
-}
-.contenido .imgBox img:hover{
+
+.imgBox img {
     height: 80vh;
 }
 
-/*Copyright*/
-.copyright {
-    position: absolute;
-    bottom: 0px;
-    left: 800px;
-    margin-bottom: 20px;
-    padding: 0 100px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* ===== ESTILOS PARA PÁGINAS SECUNDARIAS (Quién Soy, Más Sobre Mí, Formulario) ===== */
+.contactocuadro {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 800px;
+    color: #333;
 }
-.copyright p{
-    color: white;
+
+.contactoheader {
     text-align: center;
-    margin-left: 100px;
-}
-/*Redes Sociales*/
-.redesSociales{
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 200px 30px;
-    list-style: none;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(103, 81, 0, 0.1);
 }
 
-.redesSociales li{
-    padding: 50px;
-
+.contactoheader h1 {
+    color: rgb(26, 91, 0);
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-.redesSociales li a{ 
-    color: white;
-    font-size: 2.0em;
-    transition: 0.3s;
-    
+.contactoheader h2, .contactoheader h3 {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
-.redesSociales li:hover a {
+
+.contactoheader .telefono {
     color: rgb(103, 81, 0);
-} 
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px 0;
+}
 
-/*Opcionales*/
+/* Formulario */
+.formulario {
+    margin-top: 20px;
+}
 
-.circulo{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background: rgba(141, 227, 28, 0.325);
-    clip-path: circle(650px at right 800px);
+.formulario-columna {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.elemento, .elemento-full {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.elemento label, .elemento-full label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(26, 91, 0);
+    font-weight: 500;
+}
+
+.elemento input, .elemento select, .elemento-full textarea {
     width: 100%;
-    height: 100%;
-    z-index: -1000;
+    padding: 12px 15px;
+    border: 1px solid rgba(103, 81, 0, 0.3);
+    border-radius: 6px;
+    font-size: 15px;
+    background: rgba(141, 227, 28, 0.05);
+}
+
+.elemento-full textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.formulariocheckbox {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.formulariocheckbox input {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: rgb(103, 81, 0);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background: rgb(80, 63, 0);
+}
+
+/* ===== ESTILOS PARA EL CV (index_cv.html) ===== */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(103, 81, 0);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    border-bottom: 2px solid rgb(103, 81, 0);
+    padding-bottom: 5px;
+    color: rgb(103, 81, 0);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    background: rgb(103, 81, 0);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.botoninicio, .botonatras {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(103, 81, 0);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: 2px solid rgb(103, 81, 0);
+}
+
+.botoninicio:hover, .botonatras:hover {
+    background: white;
+    color: rgb(103, 81, 0);
+}
+
+
+/* ===== MEDIA QUERIES (Responsive) ===== */
+@media (max-width: 900px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .navbar {
+        margin-top: 20px;
+    }
+
+    .navbar li {
+        margin-left: 15px;
+    }
+
+    .contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imgBox {
+        margin-top: 30px;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .imgBox img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .redesSociales {
+        position: static;
+        justify-content: center;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar li {
+        margin-left: 10px;
+    }
+
+    .tituloBox h2 {
+        font-size: 1.5em;
+    }
+
+    .contactocuadro {
+        padding: 20px;
+    }
+}
+
+
+body.massobremi .circulo {
+    display: none;
+}
+
+body.massobremi .contactocuadro {
+    background: url(./img/fondo1.jpg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.massobremi .contactoheader h1, 
+body.massobremi .contactoheader h2,
+body.massobremi .contactoheader ul {
+    color: beige;
+    text-shadow: 2px 2px 5px rgb(229, 0, 0);
 }
 
 
