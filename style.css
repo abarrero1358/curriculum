@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url(../img/fondo.png);
+    background-image: url(./img/fondo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -460,7 +460,7 @@ body.massobremi .circulo {
 }
 
 body.massobremi .contactocuadro {
-    background: url(./img/fondo1.jpg);
+    background: url(./img/sobremi.jpg);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
