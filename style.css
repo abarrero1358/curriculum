@@ -626,27 +626,17 @@ body.massobremi .formulariocheckbox label {
     z-index: 1;
 }
 
-.contactocuadro::before {
+body.massobremi .contactocuadro::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.6); 
-    z-index: -1;
-    border-radius: 20px;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    z-index: 0;
 }
 
-.contactoheader {
-    font-size: 1.2rem;
-    line-height: 1.6;
+body.massobremi .contactocuadro > * {
+    position: relative;
+    z-index: 1;
 }
 
-.contactoheader h2 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-top: 1em;
-}
-
-body, .massobremi, .contactoheader {
-    font-family: "Roboto", sans-serif;
-    color: white;
-}
