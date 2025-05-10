@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Libreria iconos web https¨//ionic.io -->
+        <script  type = "module"  src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js " > </script> 
+        <script  nomodule  src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js " > </script>
+
+        <link rel="stylesheet" href="../style.css">
+        
+
+        <title>Formulario</title>
+    </head>
+    <body>
+    <section>
+        <div class="circulo"></div>
+        <header>
+            
+            <ul class="navbar">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="./index_quiensoy.html">Quién Soy</a>
+                </li>
+                <li>
+                    <a href="../pages/index_cv.html">Curriculum</a>
+                </li>
+                <li class="menu-con-desplegable">  
+                    <a href="#" class="boton-desplegable">Proyectos Destacados</a>  
+                    <div class="menuplegable">
+                        <a href="https://github.com/abarrero1358/AD-3.-Diagramas-UML.git" target="_blank">Gestión de Torneos (Java)</a>
+                        <a href="" target="_blank">PRÓXIMAMENTE!!! Página Web Responsive (JavaScrip)</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <div class="contactocuadro">
+            <div class="contactoheader">
+                <h1>Servicio de Posicionamiento Web personalizado, adaptado a cada proyecto y necesidad.</h1>
+                <h2>Contactame y estudio tu caso en detalle.</h2>
+                <h3>¿Hablamos?</h3>
+                <p class="telefono">+34 622 58 32 12</p>
+            </div>
+            
+
+            <form id="miFormulario" action="#" method="POST"> 
+            <fieldset class="formulario" >
+                <div class="formulario-columna">
+                    <div class="elemento">
+                        <label>Nombre y Apellidos:</label>
+                        <input type="text" name="nombreapellidos" required>
+                    </div>
+                    
+                    <div class="elemento">
+                        <label>E-Mail:</label>
+                        <input type="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="formulario-columna">
+                    <div class="elemento">
+                        <label>Provincia:</label>
+                        <select name="provincia">
+                            <option value="">Selecciona una provincia</option>
+                            <option value="1">Álava</option>
+                            <option value="2">Albacete</option>
+                            <option value="3">Alicante</option>
+                            <option value="4">Almería</option>
+                            <option value="5">Asturias</option>
+                            <option value="6">Ávila</option>
+                            <option value="7">Badajoz</option>
+                            <option value="8">Barcelona</option>
+                            <option value="9">Burgos</option>
+                            <option value="10">Cáceres</option>
+                            <option value="11">Cádiz</option>
+                            <option value="12">Cantabria</option>
+                            <option value="13">Castellón</option>
+                            <option value="14">Ciudad Real</option>
+                            <option value="15">Córdoba</option>
+                            <option value="16">Cuenca</option>
+                            <option value="17">Girona</option>
+                            <option value="18">Granada</option>
+                            <option value="19">Guadalajara</option>
+                            <option value="20">Guipúzcoa</option>
+                            <option value="21">Huelva</option>
+                            <option value="22">Huesca</option>
+                            <option value="23">Illes Balears</option>
+                            <option value="24">Jaén</option>
+                            <option value="25">La Coruña</option>
+                            <option value="26">La Rioja</option>
+                            <option value="27">Las Palmas</option>
+                            <option value="28">León</option>
+                            <option value="29">Lleida</option>
+                            <option value="30">Lugo</option>
+                            <option value="31">Madrid</option>
+                            <option value="32">Málaga</option>
+                            <option value="33">Murcia</option>
+                            <option value="34">Navarra</option>
+                            <option value="35">Ourense</option>
+                            <option value="36">Palencia</option>
+                            <option value="37">Pontevedra</option>
+                            <option value="38">Salamanca</option>
+                            <option value="39">Santa Cruz de Tenerife</option>
+                            <option value="40">Segovia</option>
+                            <option value="41">Sevilla</option>
+                            <option value="42">Soria</option>
+                            <option value="43">Tarragona</option>
+                            <option value="44">Teruel</option>
+                            <option value="45">Toledo</option>
+                            <option value="46">Valencia</option>
+                            <option value="47">Valladolid</option>
+                            <option value="48">Vizcaya</option>
+                            <option value="49">Zamora</option>
+                            <option value="50">Zaragoza</option>
+
+                        </select>
+                    </div>
+                    
+                    <div class="elemento">
+                        <label>Código Postal:</label>
+                        <input type="tel" name="telefono">
+                    </div>
+
+                    <div class="elemento">
+                        <label>Teléfono:</label>
+                        <input type="tel" name="telefono">
+                    </div>
+                </div>
+                
+                <div class="elemento-full">
+                    <label>Mensaje:</label>
+                    <textarea name="mensaje" rows="4"></textarea>
+                </div>
+                
+                <div class="formulariocheckbox">
+                    <input type="checkbox" id="privacidad" name="privacidad" required>
+                    <label for="privacidad">Acepto la política de privacidad...</label>
+                </div>
+                
+                <button type="submit" class="submit-btn">ENVIAR</button>
+            </fieldset>
+        </form>
+    </div>
+        </div>
+        
+        <ul class="redesSociales">
+            <li><a href="mailto:barrero1358@gmail.com">
+                <ion-icon name="mail-sharp"></ion-icon>
+            </a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/andres-barrero-507909210/?trk=opento_sprofile_topcard" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            </li>
+            <li><a href="https://github.com/abarrero1358" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+            </li>
+        </ul>
+    </section>
+        
+    </body>
+</html>
