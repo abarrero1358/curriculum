@@ -1,4 +1,4 @@
-/* ===== ESTILOS GENERALES ===== */
+/* ----ESTILOS GENERALES---- */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -9,7 +9,7 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    background-image: url(../img/fondo.png);
+    background-image: url(./img/fondo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -19,7 +19,7 @@ body {
 }
 
 body.massobremi {
-    background-image: url(../img/boxpage.png);
+    background-image: url(./img/boxpage.png);
 }
 
 section {
@@ -32,7 +32,7 @@ section {
     overflow-x: hidden;
 }
 
-/* ===== HEADER Y NAVEGACIÓN ===== */
+/* -------- HEADER Y NAVEGACIÓN ---------- */
 header {
     position: relative;
     width: 100%;
@@ -107,7 +107,7 @@ header {
     box-shadow: 0 0 10px rgba(103, 81, 0, 0.7);
 }
 
-/* ===== ELEMENTOS DECORATIVOS ===== */
+/* ---------- CIRCULO ----------- */
 .circulo {
     position: absolute;
     top: 0;
@@ -123,7 +123,7 @@ body.massobremi .circulo {
     display: none;
 }
 
-/* ===== CONTENIDO PRINCIPAL ===== */
+/* --------- CONTENIDO PRINCIPAL ---------- */
 .contenido {
     width: 100%;
     display: flex;
@@ -207,7 +207,7 @@ body.massobremi .circulo {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* ===== FORMULARIO DE CONTACTO ===== */
+/* ----------- FORMULARIO DE CONTACTO ------------- */
 .contactocuadro {
     background: white;
     border-radius: 12px;
@@ -220,7 +220,7 @@ body.massobremi .circulo {
 }
 
 body.massobremi .contactocuadro {
-    background: url(../img/sobremi.jpg);
+    background: url(./img/sobremi.jpg);
     background-size: cover;
     background-position: center;
     color: white;
@@ -281,7 +281,7 @@ body.massobremi .contactoheader h3 {
     margin-bottom: 10px;
 }
 
-/* ===== FORMULARIO ===== */
+/* ---------------- FORMULARIO ---------------- */
 .formulario {
     margin-top: 20px;
 }
@@ -365,7 +365,7 @@ body.massobremi .formulariocheckbox label {
     background: rgb(80, 63, 0);
 }
 
-/* ===== REDES SOCIALES ===== */
+/* ------------ REDES SOCIALES ----------------- */
 .redesSociales {
     display: flex;
     justify-content: center;
@@ -388,7 +388,7 @@ body.massobremi .formulariocheckbox label {
     color: rgb(103, 81, 0);
 }
 
-/* ===== COPYRIGHT ===== */
+/* -------------- COPYRIGHT ---------------*/
 .copyright {
     text-align: center;
     color: white;
@@ -397,7 +397,7 @@ body.massobremi .formulariocheckbox label {
     width: 100%;
 }
 
-/* ===== MENÚ DESPLEGABLE ===== */
+/* ------------- MENÚ DESPLEGABLE ----------------- */
 .menu-con-desplegable {
     position: relative;
 }
@@ -415,7 +415,7 @@ body.massobremi .formulariocheckbox label {
 }
 
 .menuplegable a {
-    color: white !important;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -431,7 +431,7 @@ body.massobremi .formulariocheckbox label {
     display: block;
 }
 
-/* ===== BOTONES DE NAVEGACIÓN ===== */
+/* -------------- BOTONES DE NAVEGACIÓN ---------------- */
 .botoninicio, .botonatras {
     display: inline-block;
     padding: 10px 20px;
